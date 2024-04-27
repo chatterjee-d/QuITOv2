@@ -1,6 +1,6 @@
 # QuITO v.2 : Quasi-Interpolation based Trajectory Optimization 
  
-QuITO is a numerical software package for solving constrained nonlinear optimal control problems via direct optimization. The package is built on MATLAB and can be used for constrained trajectory optimization. The base algorithm for QuITO is a novel direct multiple shooting technique that employs a special kind of quasi-interpolation technique to approximate the control trajectory. Currently, QuITO can handle the following problem specifications: 
+QuITO v.2 is a MATLAB-based numerical software package for solving constrained nonlinear optimal control problems via direct optimization. The base algorithm for QuITO  is a novel direct multiple shooting technique that employs a special kind of quasi-interpolation technique to approximate the control trajectory. The change-point localization and the mesh refinement modules in QuITO v.2 automatically detects irregular regions in the numerical optimal control and iteratiely refine it until a presepecified tolerance in the minimzed cost is reached. Currently, QuITO can handle the following problem specifications: 
 
 * Dynamics (ODEs): linear, nonlinear;
 * Constraint: state, control, mixed (which can be a nonlinear function of states and control);
