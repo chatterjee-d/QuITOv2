@@ -1,12 +1,12 @@
 # QuITO v.2 : Quasi-Interpolation based Trajectory Optimization 
  
-QuITO v.2 is a MATLAB-based numerical software package for solving constrained nonlinear optimal control problems via direct optimization. The base algorithm is a novel direct multiple shooting technique that employs a special kind of quasi-interpolation technique on piecewise uniform grid to approximate the control trajectory. The change-point localization and the mesh refinement modules in QuITO v.2 automatically detects irregular regions in the numerical optimal control and iteratiely refine the time-grid until a presepecified tolerance in the minimzed cost is reached. Currently, QuITO can handle the following problem specifications: 
+QuITO v.2 is a MATLAB-based numerical software package for solving constrained nonlinear optimal control problems via direct optimization. The base algorithm is a novel direct multiple shooting technique that employs a special kind of quasi-interpolation technique on piecewise uniform grid to approximate the control trajectory. The change-point localization and the mesh refinement modules in QuITO v.2 automatically detects irregular regions in the numerical optimal control and iteratiely refine the time-grid until a presepecified tolerance in the minimzed cost is reached. Currently, QuITO v.2 can handle the following problem specifications: 
 
 * Dynamics (ODEs): linear, nonlinear;
 * Constraint: state, control, mixed (which can be a nonlinear function of states and control);
 * Boundary specification: boundary values, constraints of terminal states.
 
-The following table collects all the pre-loaded optimal control problem examples in QuITO:
+The following table collects all the pre-loaded optimal control problem examples in QuITO v.2:
 
 | Problem | Dynamics | State/Control/Mixed Constraints | Singular Control | Additional Function |
 | ------------- | ------------- | -------------------- | ---------------- | ------------------- |
@@ -66,7 +66,7 @@ Next, download and unzip the QuITO package source files into a  desired folder, 
 
 ---
 
-### Step II (using QuITO): running the pre-loaded examples and adding your own problem
+### Step II (using QuITO v.2): running the pre-loaded examples and adding your own problem
 
 You can run the pre-loaded examples, formulate your own problems, and then solve it by employing QuITO easily. There are two ways to achieve that: 
 
@@ -89,10 +89,10 @@ The other hassle free and quick option is to use the GUI. Have a look at the ins
 #### (b) Use the Graphical User Interface (GUI)
 
 #### Installation
-The QuITO toolbox is packaged in the form of a MATLAB app with a Graphical Interface to ease the process of making use of the toolbox. To install the GUI, navigate to the [Graphical Interface](./Graphical%20Interface/) directory, and in that directory, find the installation file, [QuITO - Graphical Interface.mlappinstall](./Graphical%20Interface/QuITO%20-%20Graphical%20Interface.mlappinstall). Clicking on which MATLAB throws a pop-up prompting the user to install the application. Once the app is installed, the user can find it in the **APPS** section on MATLAB's toolbar on the top. 
+The QuITO .2 toolbox is packaged in the form of a MATLAB app with a Graphical Interface to ease the process of making use of the toolbox. To install the GUI, navigate to the [Graphical Interface](./Graphical%20Interface/) directory, and in that directory, find the installation file, [QuITO - Graphical Interface.mlappinstall](./Graphical%20Interface/QuITO%20-%20Graphical%20Interface.mlappinstall). Clicking on which MATLAB throws a pop-up prompting the user to install the application. Once the app is installed, the user can find it in the **APPS** section on MATLAB's toolbar on the top. 
 
 #### Instructions to Use
 1) Before starting the app, please ensure CasADI is installed and correctly imported onto MATLAB's path. The same can be verified using the commands `path` and `ver` on the Command Window.
-2) Once verified, navigate to the base directory of QuITO, and open the MATLAB app named **QuITO** from the **APPS** section on MATLAB's toolbar at the top of the window.
+2) Once verified, navigate to the base directory of QuITO v.2, and open the MATLAB app named **QuITO** from the **APPS** section on MATLAB's toolbar at the top of the window.
 3) Here, the user can select their preferred Example Problem or any User-Defined Template Problem from the dropdown, input values for _Number of Steps (N)_, _Shape Parameter (D)_, and _Generating function_, and simply click on the _Run_ button.
 4) The user must ensure the current working directory on MATLAB is always the [base directory](./) of the QuITO toolbox.
