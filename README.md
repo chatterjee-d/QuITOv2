@@ -28,10 +28,10 @@ The following table collects all the pre-loaded optimal control problem examples
 Implementation details for all the individual examples are given in their README.md files which can be found within their directories. Simply click and scroll down.
 
 ## How to cite?
-In case you're using QuITO v.2 (or it's previous version), consider citing the articles: 
-1) Constrained trajectory synthesis via quasi-interpolation, https://ieeexplore.ieee.org/abstract/document/9992892
-2) QuITO: Numerical software for constrained nonlinear optimal control problems, https://www.sciencedirect.com/science/article/pii/S2352711023002534.
-3) QuITO v.2: Trajectory Optimization with Uniform Error Guarantees under Path Constraints https://doi.org/10.48550/arXiv.2404.13681
+In case you're using QuITO v.2 (or it's previous version https://github.com/chatterjee-d/QuITO.git), consider citing the articles: 
+1) S.Ganguly, N. Randad, D. Chatterjee, R. Banavar, Constrained trajectory synthesis via quasi-interpolation, IEEE CDC 2022, https://ieeexplore.ieee.org/abstract/document/9992892
+2) S.Ganguly, N. Randad, R. A. D'Silva, M. Raj, D. Chatterjee, QuITO: Numerical software for constrained nonlinear optimal control problems, https://www.sciencedirect.com/science/article/pii/S2352711023002534.
+3) S.Ganguly, R. A. D'Silva D. Chatterjee, QuITO v.2: Trajectory Optimization with Uniform Error Guarantees under Path Constraints https://doi.org/10.48550/arXiv.2404.13681
 
 ## Contributors
 
