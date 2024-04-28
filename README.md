@@ -17,7 +17,7 @@ The following table collects all the pre-loaded optimal control problem examples
 | [Catalyst Mixing problem](./examples/Catalyst%20mixing%20problem)  | Nonlinear  |       No, Yes, No   | Yes | Mesh Refinement |
 | [Double integrator tracking](./examples/Double%20integrator%20tracking/)  | Linear  |    Yes, Yes, No  | No | |       
 | [Inverted pendulum on a cart](./examples/Inverted%20pendulum%20on%20a%20cart/)  | Linear  | Yes, Yes, No  | No | |
-| [Multi-agent AUV path planning](./examples/AUV%20path%20planning)  | Nonlinear  |       Yes, Yes, No   | No | Mesh Refinement |
+| [Multi-agent AUV path planning](./examples/Multi-agent%20AUV%20path%20planning)  | Nonlinear  |       Yes, Yes, No   | No | Mesh Refinement |
 | [Rayleigh problem (with control constraints)](./examples/Rayleigh%20problem%20(with%20control%20constraints)/)  | Nonlinear  | No, Yes, No  | No | |
 | [Rayleigh problem (with mixed constraints)](./examples/Rayleigh%20problem%20(with%20mixed%20constraints)/)   | Nonlinear  | No, No, Yes | No | |
 | [Robot Path Planning](./examples/Robot%20Path%20Planning/)  | Linear  | Yes, No, No  | No | |
