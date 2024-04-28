@@ -96,15 +96,15 @@ options.ipopt.limited_memory_max_skipping=1;  % Threshold for successive iterati
 
 % Type of meshing
 % - fixed mesh ('fixed')
-% - with local mesh refinement ('mesh refinement')
-options.meshstrategy='fixed';
+% - with local mesh refinement ('fixed')
+options.mesh_strategy='fixed';
 
 %% Mesh Refinement settings 
-options.termination_cost_tol= 0.001;
-options.max_refinement_iter=10;
-options.ref_width= 21; % Set as scaled down factor of the time horizon
-                       % Refinement width = time_horizon/options.ref_width
-options.refinement_param=4;  
+options.MR_termination_tol= 0.001;
+options.MR_width_factor= 21; % Set as a fraction of the time horizon (T)
+                             % Refinement width parameter = T / options.MR_width_factor
+options.MR_rate=4;           % Gridding rate 
+options.MR_max_iter=10;      % Limit on number of refinement iterations
 
 %% Output settings
 
@@ -127,9 +127,10 @@ options.plot = 2;
 
 % Mesh refinement plot options
 % 0: Do not plot
-% 1: Plot wavelet maxima and mesh history
-
-options.MRplot=1;
+% 1: Plot mesh history
+% 2: Plot iterative cost variation
+% 3: Plot all above
+options.MRplot=3;
 
 
 %-------------- END CODE ---------------
