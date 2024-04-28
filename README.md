@@ -94,5 +94,5 @@ The QuITO .2 toolbox is packaged in the form of a MATLAB app with a Graphical In
 #### Instructions to Use
 1) Before starting the app, please ensure CasADI is installed and correctly imported onto MATLAB's path. The same can be verified using the commands `path` and `ver` on the Command Window.
 2) Once verified, navigate to the base directory of QuITO v.2, and open the MATLAB app named **QuITO** from the **APPS** section on MATLAB's toolbar at the top of the window.
-3) Here, the user can select their preferred Example Problem or any User-Defined Template Problem from the dropdown, input values for _Number of Steps (N)_, _Shape Parameter (D)_, and _Generating function_, and simply click on the _Run_ button.
+3) Here, the user can select their preferred Example Problem or any User-Defined Template Problem from the dropdown, input values for _Number of Steps (N)_, _Shape Parameter (D)_, _Generating function_ and _Meshing strategy_, and simply click on the _Run_ button.
 4) The user must ensure the current working directory on MATLAB is always the [base directory](./) of the QuITO toolbox.
