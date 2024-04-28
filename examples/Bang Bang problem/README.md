@@ -1,4 +1,4 @@
-## Formulation of the Bang Bang problem in QuITO with active mesh refinement
+## Formulation of the Bang Bang problem in QuITO v.2 with active mesh refinement
 In the problem definition file **bang_bang.m**, we first encode the function handles for system dynamics:
 ```matlab
 % Set system dynamics
