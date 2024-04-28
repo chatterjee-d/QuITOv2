@@ -1,4 +1,4 @@
-## Formulation of the Aly Chan problem in QuITO 
+## Formulation of the Aly Chan problem in QuITO v.2
 In problem definition file **AlyChan.m**, we first encode the function handles for system dynamics:
 ```matlab
 % Set system dynamics
