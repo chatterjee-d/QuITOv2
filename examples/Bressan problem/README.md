@@ -39,13 +39,13 @@ State bounds:
 ```matlab
 % State bounds. xl=< x <=xu
 problem.states.xl =  [-inf -inf -inf]; % Lower bound on state
-problem.states.xu =  [-inf -inf -inf]; % Upper bound on state
+problem.states.xu =  [+inf +inf +inf]; % Upper bound on state
 ```
 Terminal state bounds:
 ```matlab
 % Terminal state bounds. xfl=< xf <=xfu. If fixed: xfl == xfu
 problem.states.xfl = [-inf -inf -inf]; % Lower bound on final state
-problem.states.xfu = [-inf -inf -inf]; % Upper bound on final state
+problem.states.xfu = [+inf +inf +inf]; % Upper bound on final state
 ```
 For **control variables** we specify bounds:
 ```matlab
