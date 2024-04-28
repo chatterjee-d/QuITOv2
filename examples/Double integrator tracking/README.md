@@ -1,5 +1,5 @@
 ## Formulation of the Inverted pendulum on a cart problem in QuITO v.2
-In the problem definition file [**invertedPendulumOnCart.m**](./invertedPendulumOnCart.m), we first encode the function handles for system dynamics:
+In the problem definition file invertedPendulumOnCart.m, we first encode the function handles for system dynamics:
 ```matlab
 % Set system dynamics
 problem.dynamicsFunc = @dynamics;
