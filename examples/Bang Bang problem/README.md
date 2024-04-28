@@ -106,7 +106,7 @@ options.ipopt.hessian_approximation='exact';
 options.ipopt.limited_memory_max_history=6;
 options.ipopt.limited_memory_max_skipping=1;
 ```
-Meshing option is chosen as:
+Meshing strategy is chosen as:
 ```matlab
 options.mesh_strategy='mesh refinement';
 ```
