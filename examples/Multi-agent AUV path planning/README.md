@@ -84,7 +84,7 @@ The Mayer cost (terminal cost) is defined in the function **terminalCost**:
 ```matlab
 mayer = 0;
 ```
-In order to incorporate mixed constraints, a copy of **src/problemTranscription/solveProblem.m** and **src/problemTranscription/transcriptionSolve.m**  is added in this directory, with the following additional lines in the **transcriptionSolve.m** file , 
+In order to incorporate path constraints that include obstacle avoidance and collision avoidance constraints, a copy of **src/problemTranscription/solveProblem.m** and **src/problemTranscription/transcriptionSolve.m**  is added in this directory, with the following additional lines in the **transcriptionSolve.m** file , 
 ```matlab
 for i = 1 : num_of_steps + 1
     % Ellipsoidal obtsacle avoidance path constraints
