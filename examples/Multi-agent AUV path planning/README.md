@@ -84,6 +84,46 @@ The Mayer cost (terminal cost) is defined in the function **terminalCost**:
 ```matlab
 mayer = 0;
 ```
+In order to incorporate mixed constraints, a copy of **src/problemTranscription/solveProblem.m** and **src/problemTranscription/transcriptionSolve.m**  is added in this directory, with the following additional lines in the **transcriptionSolve.m** file , 
+```matlab
+for i = 1 : num_of_steps + 1
+    % Ellipsoidal obtsacle avoidance path constraints
+    opti.subject_to((X(1, i)- 8.3)^2 + (X(2, i)- 8.3)^2 + (X(3, i)- 8)^2 >= 1.7^2);
+    opti.subject_to((X(1, i)- 3)^2 + (X(2, i)- 6.5)^2 + (X(3, i)- 5)^2 >= 2.7^2);
+    opti.subject_to((X(1, i)- 7.3)^2 + (X(2, i)- 2.7)^2 + (X(3, i)- 5)^2 >= 2.7^2);   
+    opti.subject_to((X(1, i)- 10)^2 + (X(2, i)- 10)^2 + (X(3, i)- 2)^2 >= 2.7^2);
+
+    opti.subject_to((X(7, i)- 8.3)^2 + (X(8, i)- 8.3)^2 + (X(9, i)- 8)^2 >= 1.7^2);
+    opti.subject_to((X(7, i)- 1.7)^2 + (X(8, i)- 1.7)^2 + (X(9, i)- 2)^2 >= 1.7^2);
+    opti.subject_to((X(7, i)- 3)^2 + (X(8, i)- 6.5)^2 + (X(9, i)- 5)^2 >= 2.7^2);
+    opti.subject_to((X(7, i)- 7.3)^2 + (X(8, i)- 2.7)^2 + (X(9, i)- 5)^2 >= 2.7^2);
+    opti.subject_to((X(7, i)- 10)^2 + (X(8, i)- 10)^2 + (X(9, i)- 2)^2 >= 2.7^2);
+    
+    opti.subject_to((X(13, i)- 8.3)^2 + (X(14, i)- 8.3)^2 + (X(15, i)- 8)^2 >= 1.7^2);
+    opti.subject_to((X(13, i)- 3)^2 + (X(14, i)- 6.5)^2 + (X(15, i)- 5)^2 >= 2.7^2);
+    opti.subject_to((X(13, i)- 7.3)^2 + (X(14, i)- 2.7)^2 + (X(15, i)- 5)^2 >= 2.7^2);
+    opti.subject_to((X(13, i)- 10)^2 + (X(14, i)- 10)^2 + (X(15, i)- 2)^2 >= 2.7^2);
+
+    %Cuboidal obstacle avoidance constraints
+    opti.subject_to((X(1, i)- 1.7)^10 + (X(2, i)- 1.7)^10 + (X(3, i)- 2)^10 >= 2^10); 
+    opti.subject_to(((X(1, i)- 2)/2)^10 + ((X(2, i)- 8.5)/3)^10 + ((X(3, i)- 5)/5)^10 >= 1); 
+    opti.subject_to(((X(1, i)- 14)/2)^10 + ((X(2, i)- 1)/3)^10 + ((X(3, i)- 7.5)/10)^10 >= 1); 
+    
+    opti.subject_to((X(7, i)- 1.7)^10 + (X(8, i)- 1.7)^10 + (X(9, i)- 2)^10 >= 2^10); 
+    opti.subject_to(((X(7, i)- 2)/2)^10 + ((X(8, i)- 8.5)/3)^10 + ((X(9, i)- 5)/5)^10 >= 1);
+    opti.subject_to(((X(7, i)- 14)/2)^10 + ((X(8, i)- 1)/3)^10 + ((X(9, i)- 7.5)/10)^10 >= 1); 
+    
+    opti.subject_to((X(13, i)- 1.7)^10 + (X(14, i)- 1.7)^10 + (X(15, i)- 2)^10 >= 2^10); 
+    opti.subject_to(((X(13, i)- 2)/2)^10 + ((X(14, i)- 8.5)/3)^10 + ((X(15, i)- 5)/5)^10 >= 1); 
+    opti.subject_to(((X(13, i)- 14)/2)^10 + ((X(14, i)- 1)/3)^10 + ((X(15, i)- 7.5)/10)^10 >= 1); 
+    
+    % UAV collision avoidance path constraints
+    opti.subject_to((X(7, i)-X(1, i) )^2 + (X(8, i)- X(2, i))^2 + (X(9, i)- X(3, i))^2 >= 2);
+    opti.subject_to((X(7, i)-X(13, i) )^2 + (X(8, i)- X(14, i))^2 + (X(9, i)- X(15, i))^2 >= 2);
+    opti.subject_to((X(13, i)-X(1, i) )^2 + (X(14, i)- X(2, i))^2 + (X(15, i)- X(3, i))^2 >= 2);
+
+end
+```
 After defining the problem data i.e., the dynamics, the constriants, and the objective we move towards setting up the optimization problem and other parameters in the  **options.m** file. 
 We define the default quasi-interpolation parameters (if not passed as input to the **options** function):
 ```matlab
